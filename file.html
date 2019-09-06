@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+<title>Cities To Visit!</title>
+</head>
+<body style="background-color:pink;">
+<div class="container">
+	<h1 style="color:white; font-family:Comic Sans MS; font-weight:bold;" class="center-align">
+		Cities To Visit
+	</h1>
+	<input type="text" id="filterInput" placeholder="Search cities...">
+	<ul id="names" class="collection with-header">
+		<li class="collection-header">
+			<h5 style="font-size:30px; color:red; font-family:Verdana;">Tamil Nadu</h5>
+		</li>
+		<li class="collection-item">
+			<a href="#" style="font-family:Georgia;">Chennai</a>
+		</li>
+		<li class="collection-item">
+			<a href="#" style="font-family:Georgia;">Coimbatore</a>
+		</li>
+		<li class="collection-item">
+			<a href="#" style="font-family:Georgia;">Madurai</a>
+		</li>
+		<li class="collection-item">
+			<a href="#" style="font-family:Georgia;">Thanjavur</a>
+		</li>
+		<li class="collection-header">
+			<h5 style="font-size:30px; color:red; font-family:Verdana;">Karnataka</h5>
+		</li>
+		<li class="collection-item">
+			<a href="#" style="font-family:Georgia;">Bengaluru</a>
+		</li>
+		<li class="collection-item">
+			<a href="#" style="font-family:Georgia;">Mangalore</a>
+		</li>
+		<li class="collection-item">
+			<a href="#" style="font-family:Georgia;">Mysuru</a>
+		</li>
+		<li class="collection-item">
+			<a href="#" style="font-family:Georgia;">Udupi</a>
+		</li>
+		<li class="collection-header">
+			<h5 style="font-size:30px; color:red; font-family:Verdana;">Kerala</h5>
+		</li>
+		<li class="collection-item">
+			<a href="#" style="font-family:Georgia;">Kochi</a>
+		</li>
+		<li class="collection-item">
+			<a href="#" style="font-family:Georgia;">Kollam</a>
+		</li>
+		<li class="collection-item">
+			<a href="#" style="font-family:Georgia;">Kottayam</a>
+		</li>
+	</ul>
+</div>
+
+<script>
+ let filterInput=document.getElementById('filterInput');
+
+	filterInput.addEventListener('keyup', filterNames);
+
+	function filterNames(){
+
+	 let filterValue=document.getElementById('filterInput').value.toUpperCase();
+
+	let ul=document.getElementById('names');
+
+		let li=ul.querySelectorAll('li.collection-item');
+
+		for(let i=0;i<li.length;i++){
+			let a=li[i].getElementsByTagName('a')[0];
+
+			if(a.innerHTML.toUpperCase().indexOf(filterValue)>-1){
+				li[i].style.display='';
+			}else{
+				li[i].style.display='none';
+			}
+		}
+
+	}
+
+
+	</script>
+	<style>
+		.container{
+	width:80%;
+	margin:auto;
+	background-color: blue;
+}
+</style>
+	</body>
+	</html>
