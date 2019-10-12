@@ -5,56 +5,148 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+<style>
+	
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+</style>
 <title>Cities To Visit!</title>
 </head>
 <body style="background-color:pink;">
+
 <div class="container">
 	<h1 style="color:white; font-family:Comic Sans MS; font-weight:bold;" class="center-align">
 		Cities To Visit
 	</h1>
+	<div class="gallery">
+  <a target="_blank" href="img_5terre.jpg">
+    <img src="https://img.traveltriangle.com/blog/wp-content/tr:w-700,h-400/uploads/2016/07/Lalbagh-Glasshouse-of-Bangalore-in-Karnataka.jpg" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="https://www.tripsavvy.com/thmb/ub0fVsGYQ152PhLGI1hUvuYBj1U=/725x483/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-177640548-56a3c3c75f9b58b7d0d39fbd.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_lights.jpg">
+    <img src="https://img.traveltriangle.com/blog/wp-content/tr:w-700,h-400/uploads/2016/07/Hampi-in-Karnataka.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="https://img.traveltriangle.com/blog/wp-content/uploads/2019/04/Places-To-Visit-In-Summer-In-Karnataka-cover.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
 	<input type="text" id="filterInput" placeholder="Search cities...">
 	<ul id="names" class="collection with-header">
 		<li class="collection-header">
-			<h5 style="font-size:30px; color:red; font-family:Verdana;">Tamil Nadu</h5>
+			<h5 style="font-size:30px; color:red; font-family:Verdana;"><button class="button" style="vertical-align:middle">Tamil Nadu</button></h5>
 		</li>
 		<li class="collection-item">
-			<a href="#" style="font-family:Georgia;">Chennai</a>
+			<a href="https://en.wikipedia.org/wiki/Chennai" style="font-family:Georgia;">Chennai</a>
 		</li>
 		<li class="collection-item">
-			<a href="#" style="font-family:Georgia;">Coimbatore</a>
+			<a href="https://en.wikipedia.org/wiki/Coimbatore" style="font-family:Georgia;">Coimbatore</a>
 		</li>
 		<li class="collection-item">
-			<a href="#" style="font-family:Georgia;">Madurai</a>
+			<a href="https://en.wikipedia.org/wiki/Madurai" style="font-family:Georgia;">Madurai</a>
 		</li>
 		<li class="collection-item">
-			<a href="#" style="font-family:Georgia;">Thanjavur</a>
+			<a href="https://en.wikipedia.org/wiki/Thanjavur" style="font-family:Georgia;">Thanjavur</a>
 		</li>
 		<li class="collection-header">
-			<h5 style="font-size:30px; color:red; font-family:Verdana;">Karnataka</h5>
+			<h5 style="font-size:30px; color:red; font-family:Verdana;"><button class="button" style="vertical-align:middle">Karnataka</button></h5>
 		</li>
 		<li class="collection-item">
-			<a href="#" style="font-family:Georgia;">Bengaluru</a>
+			<a href="https://en.wikipedia.org/wiki/Banglore" style="font-family:Georgia;">Bengaluru</a>
 		</li>
 		<li class="collection-item">
-			<a href="#" style="font-family:Georgia;">Mangalore</a>
+			<a href="https://en.wikipedia.org/wiki/Mangalore" style="font-family:Georgia;">Mangalore</a>
 		</li>
 		<li class="collection-item">
-			<a href="#" style="font-family:Georgia;">Mysuru</a>
+			<a href="https://en.wikipedia.org/wiki/Mysore" style="font-family:Georgia;">Mysuru</a>
 		</li>
 		<li class="collection-item">
-			<a href="#" style="font-family:Georgia;">Udupi</a>
+			<a href="https://en.wikipedia.org/wiki/Udupi" style="font-family:Georgia;">Udupi</a>
 		</li>
 		<li class="collection-header">
-			<h5 style="font-size:30px; color:red; font-family:Verdana;">Kerala</h5>
+			<h5 style="font-size:30px; color:red; font-family:Verdana;"><button class="button" style="vertical-align:middle">Kerala</button></h5>
 		</li>
 		<li class="collection-item">
-			<a href="#" style="font-family:Georgia;">Kochi</a>
+			<a href="https://en.wikipedia.org/wiki/Kochi" style="font-family:Georgia;">Kochi</a>
 		</li>
 		<li class="collection-item">
-			<a href="#" style="font-family:Georgia;">Kollam</a>
+			<a href="https://en.wikipedia.org/wiki/Kollam" style="font-family:Georgia;">Kollam</a>
 		</li>
 		<li class="collection-item">
-			<a href="#" style="font-family:Georgia;">Kottayam</a>
+			<a href="https://en.wikipedia.org/wiki/Kottayam" style="font-family:Georgia;">Kottayam</a>
 		</li>
 	</ul>
 </div>
